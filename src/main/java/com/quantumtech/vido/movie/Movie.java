@@ -1,11 +1,14 @@
 package com.quantumtech.vido.movie;
 
 import com.quantumtech.vido.enumeration.GenreEnum;
+import com.quantumtech.vido.genre.Genre;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Data
@@ -31,10 +34,17 @@ public class Movie {
     private String year;
     private String time;
     private String lang;
-    @ElementCollection(fetch = FetchType.EAGER)
-    @CollectionTable(name = "GenreEnum", joinColumns = @JoinColumn(name = "id"))
-    @Enumerated(EnumType.STRING)
-    private List<GenreEnum> genreEnum;
+    @ManyToMany
+    @JoinTable(
+            name = "course_like",
+            joinColumns = @JoinColumn(name = "student_id"),
+            inverseJoinColumns = @JoinColumn(name = "course_id"))
+    Collection<Genre> isGenre;
+
+//    @ElementCollection(fetch = FetchType.EAGER)
+//    @CollectionTable(name = "GenreEnum", joinColumns = @JoinColumn(name = "id"))
+//    @Enumerated(EnumType.STRING)
+//    private List<GenreEnum> genreEnum;
 
 //    public Movie() {
 //    }
