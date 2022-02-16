@@ -26,6 +26,7 @@ public class MoveConfig {
                 "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
                 "2021",
                 "2h 35m",
+                "http://localhost:8080/server/image/server1.png",
                 "English",
                     genres
             );
@@ -36,6 +37,7 @@ public class MoveConfig {
                 "Dom and the crew must take on an international terrorist who turns out to be Dom and Mia's estranged brother.",
                 "2021",
                 "2h 23m",
+                "http://localhost:8080/server/image/server1.png",
                 "English",
                 genres
         );

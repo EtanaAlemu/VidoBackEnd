@@ -7,11 +7,15 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import javax.websocket.server.PathParam;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.List;
 
 import static java.time.LocalDateTime.now;
 import static java.util.Map.of;
 import static org.springframework.http.HttpStatus.OK;
+import static org.springframework.http.MediaType.IMAGE_PNG_VALUE;
 
 @RestController
 @RequestMapping(path = "api/v1/movies")
@@ -30,7 +34,7 @@ public class MovieController {
     }
 
     @GetMapping("/get/{id}")
-    public ResponseEntity<Response> getServer(@PathVariable("id") Long id){
+    public ResponseEntity<Response> getMovie(@PathVariable("id") Long id){
         Movie movie = movieService.get(id);
         return ResponseEntity.ok(
                 Response.builder()
@@ -61,5 +65,10 @@ public class MovieController {
                             @RequestParam(required = false) String time,
                             @RequestParam(required = false) String lang ){
         movieService.updateMovie(movieId, title, description, year, time, lang);
+    }
+
+    @GetMapping(value = "/image/{fileName}", produces = IMAGE_PNG_VALUE)
+    public byte[] getMoviesImage(@PathVariable("fileName") String fileName) throws IOException {
+        return Files.readAllBytes(Paths.get(System.getProperty("user.home")+"/Downloads/image/"+fileName));
     }
 }
