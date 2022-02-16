@@ -7,11 +7,10 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface GenreRepository
-//        extends JpaRepository<GenreEnum,Long>
+public interface GenreRepository extends JpaRepository<Genre,Long>
 {
 
-//    @Query(value = "SELECT * FROM Genre g WHERE g.name = 1",nativeQuery = true)
-//    Optional<GenreEnum> findGenreByName(String name);
+    @Query(value = "SELECT * FROM Genre g WHERE g.genre_type = 1",nativeQuery = true)
+    Optional<Genre> findGenreByGenreType(String genreType);
 }
 

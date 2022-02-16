@@ -23,21 +23,4 @@ public class VidoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(VidoApplication.class, args);
 	}
-
-	@Bean
-	CommandLineRunner run(MovieRepository repository) {
-		ArrayList<Genre> genres = new ArrayList<>();
-		genres.add(new Genre(null,"Animation"));
-		genres.add(new Genre(null,"Adventure"));
-		genres.add(new Genre(null,"Comedy"));
-		return args -> {
-			repository.save(new Movie(null,
-					"Hotel Transylvania: Transformania",
-					"After one experiment, Johnny turns into a monster and everyone else becomes human. Now it has to be seen whether they will be able to reverse this experiment.",
-					"2022",
-					"1h 27m",
-					"Eng", genres
-					));
-			};
-	}
 }

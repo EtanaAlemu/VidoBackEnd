@@ -19,15 +19,15 @@ public class GenreService {
         this.repository = repository;
     }
 
-    public List<GenreEnum> getGenres() {
+    public List<Genre> getGenres() {
         return repository.findAll();
     }
 
     public void addNewGenre(Genre genre) {
 
-        Optional<Genre> genreOptional = repository.findGenreByName(genre.getName());
+        Optional<Genre> genreOptional = repository.findGenreByGenreType(genre.getGenreType());
         if(genreOptional.isPresent()){
-            throw new IllegalStateException("Name taken");
+            throw new IllegalStateException("Genre Type Already taken ");
         }
         repository.save(genre);
     }
@@ -45,7 +45,7 @@ public class GenreService {
     @Transactional
     public void updateGenre(Long genreId, String name) {
         Genre genre= repository.findById(genreId).orElseThrow(() -> new IllegalStateException("Genre with id "+genreId+" is not exists"));
-        if ( name != null && name.length() > 0 && !Objects.equals(genre.getName(), name))
-            genre.setName(name);
+        if ( name != null && name.length() > 0 && !Objects.equals(genre.getGenreType(), name))
+            genre.setGenreType(name);
     }
 }

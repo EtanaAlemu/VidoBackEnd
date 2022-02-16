@@ -1,17 +1,18 @@
 package com.quantumtech.vido.movie;
 
-import com.quantumtech.vido.enumeration.GenreEnum;
 import com.quantumtech.vido.genre.Genre;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import org.hibernate.Hibernate;
+
 import javax.persistence.*;
 import java.util.Collection;
-import java.util.List;
-import java.util.Set;
+import java.util.Objects;
 
 @Entity
-@Data
+@Getter
+@Setter
+@ToString
+@RequiredArgsConstructor
 @AllArgsConstructor
 @NoArgsConstructor
 
@@ -19,15 +20,6 @@ public class Movie {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-//    @SequenceGenerator(
-//            name = "movie_sequence",
-//            sequenceName = "movie_sequence",
-//            allocationSize = 1
-//    )
-//    @GeneratedValue(
-//            strategy = GenerationType.SEQUENCE,
-//            generator = "movie_sequence"
-//    )
     private Long id;
     private String title;
     private String description;
@@ -36,95 +28,22 @@ public class Movie {
     private String lang;
     @ManyToMany
     @JoinTable(
-            name = "course_like",
-            joinColumns = @JoinColumn(name = "student_id"),
-            inverseJoinColumns = @JoinColumn(name = "course_id"))
+            name = "is_genre",
+            joinColumns = @JoinColumn(name = "movie_id"),
+            inverseJoinColumns = @JoinColumn(name = "genre_id"))
+    @ToString.Exclude
     Collection<Genre> isGenre;
 
-//    @ElementCollection(fetch = FetchType.EAGER)
-//    @CollectionTable(name = "GenreEnum", joinColumns = @JoinColumn(name = "id"))
-//    @Enumerated(EnumType.STRING)
-//    private List<GenreEnum> genreEnum;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
+        Movie movie = (Movie) o;
+        return id != null && Objects.equals(id, movie.id);
+    }
 
-//    public Movie() {
-//    }
-//
-//    public Movie(Long id, String title, String description, String year, String time, String lang) {
-//        this.id = id;
-//        this.title = title;
-//        this.description = description;
-//        this.year = year;
-//        this.time = time;
-//        this.lang = lang;
-//    }
-//
-//    public Movie(String title, String description, String year, String time, String lang) {
-//        this.title = title;
-//        this.description = description;
-//        this.year = year;
-//        this.time = time;
-//        this.lang = lang;
-//    }
-//
-//    public Long getId() {
-//        return id;
-//    }
-//
-//    public void setId(Long id) {
-//        this.id = id;
-//    }
-//
-//    public String getTitle() {
-//        return title;
-//    }
-//
-//    public void setTitle(String title) {
-//        this.title = title;
-//    }
-//
-//    public String getDescription() {
-//        return description;
-//    }
-//
-//    public void setDescription(String description) {
-//        this.description = description;
-//    }
-//
-//    public String getYear() {
-//        return year;
-//    }
-//
-//    public void setYear(String year) {
-//        this.year = year;
-//    }
-//
-//    public String getTime() {
-//        return time;
-//    }
-//
-//    public void setTime(String time) {
-//        this.time = time;
-//    }
-//
-//    public String getLang() {
-//        return lang;
-//    }
-//
-//    public void setLang(String lang) {
-//        this.lang = lang;
-//    }
-//
-//    @Override
-//    public String toString() {
-//        String s = "title='" + title + '\'';
-//
-//        return "Movie{" +
-//                "id=" + id +
-//                ", title='" + title + '\'' +
-//                ", description='" + description + '\'' +
-//                ", year='" + year + '\'' +
-//                ", time='" + time + '\'' +
-//                ", lang='" + lang + '\'' +
-//                '}';
-//    }
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
+    }
 }
