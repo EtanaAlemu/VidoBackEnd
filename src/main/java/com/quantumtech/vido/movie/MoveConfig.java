@@ -8,16 +8,16 @@ import org.springframework.context.annotation.Configuration;
 import java.util.ArrayList;
 import java.util.List;
 
-//@Configuration
+@Configuration
 public class MoveConfig {
 
     @Bean
     CommandLineRunner MoviesCommandLineRunner(MovieRepository repository){
 
         ArrayList<Genre> genres = new ArrayList<>();
-        genres.add(new Genre(null,"Animation"));
-        genres.add(new Genre(null,"Adventure"));
-        genres.add(new Genre(null,"Comedy"));
+        genres.add(new Genre(3L,"Animation"));
+        genres.add(new Genre(4L,"Adventure"));
+        genres.add(new Genre(5L,"Comedy"));
 
         return args -> {
             Movie Dune = new Movie(
@@ -26,7 +26,7 @@ public class MoveConfig {
                 "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
                 "2021",
                 "2h 35m",
-                "http://localhost:8080/server/image/server1.png",
+                "http://localhost:8080/api/v1/movies/image/server1.png",
                 "English",
                     genres
             );
@@ -37,7 +37,7 @@ public class MoveConfig {
                 "Dom and the crew must take on an international terrorist who turns out to be Dom and Mia's estranged brother.",
                 "2021",
                 "2h 23m",
-                "http://localhost:8080/server/image/server1.png",
+                "http://localhost:8080/api/v1/movies/image/server1.png",
                 "English",
                 genres
         );
