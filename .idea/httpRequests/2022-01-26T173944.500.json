@@ -1,0 +1,7 @@
+{
+  "timestamp": "2022-01-26T14:39:44.404+00:00",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "Parameter value [Movie{id=3, title='Dune Part 1', description='Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.', year='2021', time='2h 35m', lang='English'}] did not match expected type [java.lang.String (n/a)]; nested exception is java.lang.IllegalArgumentException: Parameter value [Movie{id=3, title='Dune Part 1', description='Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.', year='2021', time='2h 35m', lang='English'}] did not match expected type [java.lang.String (n/a)]",
+  "path": "/api/v1/movies"
+}

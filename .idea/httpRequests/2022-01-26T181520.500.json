@@ -1,0 +1,7 @@
+{
+  "timestamp": "2022-01-26T15:15:20.794+00:00",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "Title taken",
+  "path": "/api/v1/movies"
+}

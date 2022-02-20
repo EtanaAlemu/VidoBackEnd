@@ -1,0 +1,7 @@
+{
+  "timestamp": "2022-01-26T16:44:30.114+00:00",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "Movie with id 1 is not exists",
+  "path": "/api/v1/movies/1"
+}

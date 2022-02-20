@@ -1,0 +1,7 @@
+{
+  "timestamp": "2022-01-26T14:26:57.899+00:00",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "Parameter value [Movie{id=null, title='null', description='null', year='null', time='null', lang='null'}] did not match expected type [java.lang.String (n/a)]; nested exception is java.lang.IllegalArgumentException: Parameter value [Movie{id=null, title='null', description='null', year='null', time='null', lang='null'}] did not match expected type [java.lang.String (n/a)]",
+  "path": "/api/v1/movies"
+}

@@ -1,0 +1,509 @@
+PUT http://localhost:8080/api/v1/movies/1?title=D
+
+###
+
+DELETE http://localhost:8080/api/v1/movies/1
+
+<> 2022-01-26T194430.500.json
+
+###
+
+DELETE http://localhost:8080/api/v1/movies/1
+
+###
+
+DELETE http://localhost:8080/api/v1/movies/1
+
+<> 2022-01-26T194238.500.json
+
+###
+
+DELETE http://localhost:8080/api/v1/movies/{1}
+
+###
+
+DELETE http://localhost:8080/api/v1/movies/{{1}}
+
+###
+
+DELETE http://localhost:8080/api/v1/movies/1
+
+<> 2022-01-26T194112.500.json
+
+###
+
+DELETE http://localhost:8080/api/v1/movies/3
+
+<> 2022-01-26T194048.500.json
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "title": "Dune Part",
+  "description": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+  "year": "2021",
+  "time": "2h 35m",
+  "lang": "English"
+}
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "title": "Dune Part",
+  "description": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+  "year": "2021",
+  "time": "2h 35m",
+  "lang": "English"
+}
+
+<> 2022-01-26T181520.500.json
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "title": "Dune Part",
+  "description": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+  "year": "2021",
+  "time": "2h 35m",
+  "lang": "English"
+}
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "title": "Dune Part",
+  "description": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+  "year": "2021",
+  "time": "2h 35m",
+  "lang": "English"
+}
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "title": "Dune Part",
+  "description": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+  "year": "2021",
+  "time": "2h 35m",
+  "lang": "English"
+}
+
+<> 2022-01-26T181142.500.json
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "title": "Dune Part",
+  "description": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+  "year": "2021",
+  "time": "2h 35m",
+  "lang": "English"
+}
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "title": "Dune Part",
+  "description": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+  "year": "2021",
+  "time": "2h 35m",
+  "lang": "English"
+}
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "title": "Dune Part",
+  "description": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+  "year": "2021",
+  "time": "2h 35m",
+  "lang": "English"
+}
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "title": "Dune Part",
+  "description": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+  "year": "2021",
+  "time": "2h 35m",
+  "lang": "English"
+}
+
+<> 2022-01-26T180545.500.json
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "title": "Dune Part 1",
+  "description": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+  "year": "2021",
+  "time": "2h 35m",
+  "lang": "English"
+}
+
+<> 2022-01-26T180536.500.json
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "title": "Dune Part 1",
+  "description": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+  "year": "2021",
+  "time": "2h 35m",
+  "lang": "English"
+}
+
+<> 2022-01-26T180521.500.json
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "title": "Dune Part 1",
+  "description": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+  "year": "2021",
+  "time": "2h 35m",
+  "lang": "English"
+}
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "title": "Dune Part 1",
+  "description": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+  "year": "2021",
+  "time": "2h 35m",
+  "lang": "English"
+}
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "title": "Dune Part 1",
+  "description": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+  "year": "2021",
+  "time": "2h 35m",
+  "lang": "English"
+}
+
+<> 2022-01-26T180048.500.json
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "title": "Dune Part 1",
+  "description": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+  "year": "2021",
+  "time": "2h 35m",
+  "lang": "English"
+}
+
+<> 2022-01-26T174821.500.json
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "title": "Dune Part 1",
+  "description": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+  "year": "2021",
+  "time": "2h 35m",
+  "lang": "English"
+}
+
+<> 2022-01-26T174750.500.json
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "title": "Dune Part 1",
+  "description": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+  "year": "2021",
+  "time": "2h 35m",
+  "lang": "English"
+}
+
+<> 2022-01-26T174607.500.json
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "id": 3,
+  "title": "Dune Part 1",
+  "description": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+  "year": "2021",
+  "time": "2h 35m",
+  "lang": "English"
+}
+
+<> 2022-01-26T174546.500.json
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "id": 3,
+  "title": "Dune Part 1",
+  "description": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+  "year": "2021",
+  "time": "2h 35m",
+  "lang": "English"
+}
+
+<> 2022-01-26T174243.500.json
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "id": 3,
+  "title": "Dune Part 1",
+  "description": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+  "year": "2021",
+  "time": "2h 35m",
+  "lang": "English"
+}
+
+<> 2022-01-26T174230.500.json
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "id": 3,
+  "title": "Dune Part 1",
+  "description": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+  "year": "2021",
+  "time": "2h 35m",
+  "lang": "English"
+}
+
+<> 2022-01-26T174011.500.json
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "id": 3,
+  "title": "Dune Part 1",
+  "description": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+  "year": "2021",
+  "time": "2h 35m",
+  "lang": "English"
+}
+
+<> 2022-01-26T173944.500.json
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "id": 3,
+  "title": "Dune Part 1",
+  "description": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+  "year": "2021",
+  "time": "2h 35m",
+  "lang": "English"
+}
+
+<> 2022-01-26T173818.500.json
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "id": 3,
+  "title": "Dune",
+  "description": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+  "year": "2021",
+  "time": "2h 35m",
+  "lang": "English"
+}
+
+<> 2022-01-26T173705.500.json
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "id": 3,
+  "title": "Dune",
+  "description": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+  "year": "2021",
+  "time": "2h 35m",
+  "lang": "English"
+}
+
+<> 2022-01-26T173642.500.json
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "id": 3,
+  "title": "Dune",
+  "description": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+  "year": "2021",
+  "time": "2h 35m",
+  "lang": "English"
+}
+
+<> 2022-01-26T173622.500.json
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "id": 3,
+  "title": "Dune",
+  "description": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+  "year": "2021",
+  "time": "2h 35m",
+  "lang": "English"
+}
+
+<> 2022-01-26T173557.500.json
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "id": 3,
+  "title": "Dune",
+  "description": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+  "year": "2021",
+  "time": "2h 35m",
+  "lang": "English"
+}
+
+<> 2022-01-26T172840.500.json
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+  "title": "Dune",
+  "description": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+  "year": "2021",
+  "time": "2h 35m",
+  "lang": "English"
+}
+
+<> 2022-01-26T172748.500.json
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+
+{
+
+}
+
+<> 2022-01-26T172657.500.json
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+{:
+    "title": "Dune",
+    "description": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+    "year": "2021",
+    "time": "2h 35m",
+    "lang": "English"
+  }:
+
+<> 2022-01-26T172552.400.html
+
+###
+
+POST http://localhost:8080/api/v1/movies
+Content-Type: application/json
+{:
+    "title": "Dune",
+    "description": "Feature adaptation of Frank Herbert's science fiction novel about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.",
+    "year": "2021",
+    "time": "2h 35m",
+    "lang": "English"
+  }:
+
+<> 2022-01-26T172434.400.html
+
+###
+
