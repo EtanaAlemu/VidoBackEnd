@@ -1,11 +1,13 @@
 package com.quantumtech.vido.movie;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Collection;
 
+@SecurityRequirement(name = "bearerAuth")
 public interface MovieServiceInterface {
 
     Movie createMovie(Movie movie, String filename);

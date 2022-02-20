@@ -3,10 +3,12 @@ package com.quantumtech.vido.movie;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.quantumtech.vido.model.Response;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -25,7 +27,8 @@ import static org.springframework.http.HttpStatus.OK;
 import static org.springframework.http.MediaType.IMAGE_PNG_VALUE;
 
 @RestController
-@SecurityRequirement(name = "vidoapi")
+//@SecurityRequirement(name = "vidoapi")
+//@SecurityRequirement(name = "bearerAuth")
 @RequestMapping(path = "api/v1/movies")
 public class MovieController {
 
@@ -37,6 +40,8 @@ public class MovieController {
     }
 
     @GetMapping()
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_AUDIENCE')")
+//    @Operation(summary = "My endpoint", security = @SecurityRequirement(name = "bearerAuth"))
     public ResponseEntity<Response> getMovies() {
         return ResponseEntity.ok(
                 Response.builder()
@@ -49,7 +54,9 @@ public class MovieController {
         );
     }
 
-    @GetMapping("/get/{id}")
+    @GetMapping("/{id}")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_AUDIENCE')")
+//    @Operation(summary = "My endpoint", security = @SecurityRequirement(name = "bearerAuth"))
     public ResponseEntity<Response> getMovie(@PathVariable("id") Long id) {
         Movie movie = movieService.getMovie(id);
         return ResponseEntity.ok(
@@ -64,6 +71,8 @@ public class MovieController {
     }
 
     @PostMapping
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
+    @Operation(summary = "My endpoint", security = @SecurityRequirement(name = "bearerAuth"))
     public ResponseEntity<Response> saveMovie(@Valid @RequestParam ("movie") String movie, @Valid  @RequestParam("file") MultipartFile file) {
         movieService.storeImage(file);
         Movie movieJson = movieService.getJson(movie);
@@ -108,23 +117,25 @@ public class MovieController {
 //        );
 //    }
 
-    @PostMapping("/image")
-    public ResponseEntity<Response> uploadImage(@RequestParam("file") MultipartFile file) {
-        movieService.storeImage(file);
-//        movie.setImageUrl("http://localhost:8080/api/v1/movies/image/"+file.getName());
-        return ResponseEntity.ok(
-                Response.builder()
-                        .timeStamp(now())
-                        .data(of("image", file.getOriginalFilename()))
-                        .message("Image created")
-                        .status(CREATED)
-                        .statusCode(CREATED.value())
-                        .build()
-        );
-    }
+//    @PostMapping("/image")
+//    public ResponseEntity<Response> uploadImage(@RequestParam("file") MultipartFile file) {
+//        movieService.storeImage(file);
+////        movie.setImageUrl("http://localhost:8080/api/v1/movies/image/"+file.getName());
+//        return ResponseEntity.ok(
+//                Response.builder()
+//                        .timeStamp(now())
+//                        .data(of("image", file.getOriginalFilename()))
+//                        .message("Image created")
+//                        .status(CREATED)
+//                        .statusCode(CREATED.value())
+//                        .build()
+//        );
+//    }
 
     @DeleteMapping(path = "{movieId}")
-    public ResponseEntity<Response> deleteMovie(@PathVariable("id") Long id) {
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
+    @Operation(summary = "My endpoint", security = @SecurityRequirement(name = "bearerAuth"))
+    public ResponseEntity<Response> deleteMovie(@PathVariable("movieId") Long id) {
         return ResponseEntity.ok(
                 Response.builder()
                         .timeStamp(now())
@@ -137,6 +148,8 @@ public class MovieController {
     }
 
     @PutMapping(path = "{movieId}")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
+    @Operation(summary = "My endpoint", security = @SecurityRequirement(name = "bearerAuth"))
     public ResponseEntity<Response> updateMovie(@RequestBody @Valid Movie movie) {
         return ResponseEntity.ok(
                 Response.builder()
@@ -150,6 +163,8 @@ public class MovieController {
     }
 
     @GetMapping(value = "/image/{fileName}", produces = IMAGE_PNG_VALUE)
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_AUDIENCE')")
+//    @Operation(summary = "My endpoint", security = @SecurityRequirement(name = "bearerAuth"))
     public byte[] getMoviesImage(@PathVariable("fileName") String fileName) throws IOException {
         return Files.readAllBytes(Paths.get(System.getProperty("user.home") + "/Downloads/images/" + fileName));
     }

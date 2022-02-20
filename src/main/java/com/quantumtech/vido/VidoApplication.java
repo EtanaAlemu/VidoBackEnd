@@ -1,5 +1,6 @@
 package com.quantumtech.vido;
 
+import com.quantumtech.vido.jwt.JwtConfig;
 import com.quantumtech.vido.storage.StorageProperties;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.enums.SecuritySchemeIn;
@@ -18,7 +19,8 @@ import java.util.Arrays;
 @SpringBootApplication
 @OpenAPIDefinition(info = @Info(title = "Vido API", version = "1.0", description = "Vido Movie Rental"))
 @SecurityScheme(name = "vidoapi", scheme = "basic", type = SecuritySchemeType.HTTP, in = SecuritySchemeIn.HEADER)
-@EnableConfigurationProperties(StorageProperties.class)
+//@EnableConfigurationProperties(StorageProperties.class)
+@EnableConfigurationProperties(JwtConfig.class)
 public class VidoApplication {
 
 	public static void main(String[] args) {

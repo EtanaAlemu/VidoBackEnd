@@ -5,6 +5,7 @@ import com.quantumtech.vido.movie.Movie;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -16,7 +17,8 @@ import static org.springframework.http.HttpStatus.CREATED;
 import static org.springframework.http.HttpStatus.OK;
 
 @RestController
-@SecurityRequirement(name = "vidoapi")
+//@SecurityRequirement(name = "vidoapi")
+//@SecurityRequirement(name = "bearerAuth")
 @RequestMapping(path = "api/v1/genres")
 public class GenreController {
 
@@ -27,8 +29,8 @@ public class GenreController {
         this.genreService = genreService;
     }
 
-
     @GetMapping
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_AUDIENCE')")
     public ResponseEntity<Response> getGenre() {
         return ResponseEntity.ok(
                 Response.builder()
@@ -45,6 +47,7 @@ public class GenreController {
 //        return genreService.getGenres();
 //    }
     @GetMapping("/get/{id}")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_AUDIENCE')")
     public ResponseEntity<Response> getMovie(@PathVariable("id") Long id) {
         Genre genre = genreService.getGenre(id);
         return ResponseEntity.ok(
@@ -59,6 +62,7 @@ public class GenreController {
     }
 
     @PostMapping
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
     public ResponseEntity<Response> saveGenre(@RequestBody @Valid Genre genre) {
         return ResponseEntity.ok(
                 Response.builder()
@@ -75,6 +79,7 @@ public class GenreController {
 //    }
 
     @DeleteMapping(path = "{genreId}")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
     public ResponseEntity<Response> deleteGenre(@PathVariable("id") Long id) {
         return ResponseEntity.ok(
                 Response.builder()
@@ -91,6 +96,7 @@ public class GenreController {
 //    }
 
     @PutMapping(path = "{genreId}")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN','ROLE_AUDIENCE')")
     public ResponseEntity<Response> updateGenre(@RequestBody @Valid Genre genre) {
         return ResponseEntity.ok(
                 Response.builder()
