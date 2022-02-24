@@ -4,20 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8a46598-2a4c-4f16-a31a-f00e33c723ea" name="Changes" comment="swagger added&#10;basic auth added&#10;image upload added">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quantumtech/vido/config/OpenApi30Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/quantumtech/vido/controller/TemplateController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+    <list default="true" id="c8a46598-2a4c-4f16-a31a-f00e33c723ea" name="Changes" comment="JWT">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantumtech/vido/VidoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantumtech/vido/VidoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantumtech/vido/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantumtech/vido/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantumtech/vido/genre/GenreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantumtech/vido/genre/GenreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantumtech/vido/genre/GenreServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantumtech/vido/genre/GenreServiceInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantumtech/vido/movie/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantumtech/vido/movie/MovieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantumtech/vido/movie/MovieServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantumtech/vido/movie/MovieServiceInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantumtech/vido/storage/StorageProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantumtech/vido/storage/StorageProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/quantumtech/vido/security/ApplicationSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/quantumtech/vido/security/ApplicationSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quantumtech/vido/security/ApplicationSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/quantumtech/vido/security/ApplicationSecurityConfig.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +163,9 @@
       <workItem from="1645096582720" duration="16360000" />
       <workItem from="1645188898879" duration="1804000" />
       <workItem from="1645268746543" duration="3435000" />
-      <workItem from="1645341979142" duration="18660000" />
+      <workItem from="1645341979142" duration="18985000" />
+      <workItem from="1645424103361" duration="139000" />
+      <workItem from="1645680563501" duration="6937000" />
     </task>
     <task id="LOCAL-00001" summary="final working genre-movie many-to-many relation">
       <created>1645001364961</created>
@@ -193,7 +188,21 @@
       <option name="project" value="LOCAL" />
       <updated>1645116744285</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="JWT">
+      <created>1645377544635</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1645377544635</updated>
+    </task>
+    <task id="LOCAL-00005" summary="JWT">
+      <created>1645377678826</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1645377678826</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,7 +227,8 @@
     <MESSAGE value="final working genre-movie many-to-many relation" />
     <MESSAGE value="swagger2 added" />
     <MESSAGE value="swagger added&#10;basic auth added&#10;image upload added" />
-    <option name="LAST_COMMIT_MESSAGE" value="swagger added&#10;basic auth added&#10;image upload added" />
+    <MESSAGE value="JWT" />
+    <option name="LAST_COMMIT_MESSAGE" value="JWT" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
